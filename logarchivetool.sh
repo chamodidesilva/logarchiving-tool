@@ -8,8 +8,8 @@
 #Example: ./logarchivetool.sh /var/log/syslog
 
 usage() {
-    echo "Usage: $0 <logfile>"
-    echo "Example: $0 /var/log/syslog"
+    echo "Usage: logarchive <logfile>"
+    echo "Example: logarchive /var/log/syslog"
 }
 
 if [ "$#" -eq 0 ]; then
@@ -20,6 +20,9 @@ elif [ "$#" -gt 1 ]; then
     echo "Error: Too many arguments"
     usage
     exit 1
+elif [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
+    usage
+    exit 0
 elif [ ! -e "$1" ]; then
     echo "Error: File not found"
     usage
