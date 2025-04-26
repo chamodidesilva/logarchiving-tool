@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #Author: Chamodi De Silva
 #Date: 2025-04-26
